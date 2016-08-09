@@ -31,19 +31,17 @@ def find_overlap(start,end,point):
 	return(record)
 
 def main():
-	'''
 	parser=argparse.ArgumentParser(description=__doc__,
 			formatter_class=argparse.RawDescriptionHelpFormatter,
 			epilog='author:\t{0}\nmail:\t{1}'.format(__author__,__mail__))
 	parser.add_argument('-i','--input',help='input file',dest='input',type=open,required=True)
 	parser.add_argument('-o','--output',help='output file',dest='output',type=argparse.FileType('w'),required=True)
 	args=parser.parse_args()
-	'''
 
 	start = random.sample(list(range(10000000)),100000)
 	end = random.sample(list(range(10000000)),100000)
 	point = [10,100]
-	print(find_overlap2(start,end,point))
+	print(find_overlap(start,end,point))
 
 if __name__ == '__main__':
 	main()
